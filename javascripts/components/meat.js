@@ -1,12 +1,26 @@
+import cart from '../components/cart.js';
+
 const meatInfo = {
-    fish: 1,
+    meatballs: 2,
     sausage: 2,
-    meatballs: 3,
-    beef: 2
+    fish: 3,
+    
+   
 };
 
 const getMeat = () => {
-    return MeatInfo;
+    return meatInfo;
 };
 
-export default { getMeat };
+
+const addMeat = (ingredient) => {
+    const ingredientToAdd = {
+        name: ingredient,
+        price: meatInfo[ingredient],
+        type: 'meat'
+    };
+
+    cart.addToCart(ingredientToAdd);
+} 
+
+export default { getMeat, addMeat };

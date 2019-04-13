@@ -6,18 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>sandwich-maker</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles/main.css" />
 </head>
 
 <body>
-    <h2>Hi</h2>
-    <button type="button" class="btn btn-danger">Danger</button>
+<h2>Which 'wich is your 'wich?</h2>
+<form>
+    <div id="pick-bread">
+    <h4>Bread</h4>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="white" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">White: $1</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="wheat" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">Wheat: $2</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="hardtack" value="option3">
+        <label class="form-check-label" for="inlineCheckbox3">Hardtack: $3</label>
+    </div>
+    </div>
+
+    <div id="pick-meat">
+    <h4>Meat</h4>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="meatballs" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">Meatballs: $2</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="sausage" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">Sausage: $2</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="fish" value="option3">
+        <label class="form-check-label" for="inlineCheckbox3">Fish: $3</label>
+    </div>
+    </div>
+
+    <div id="pick-cheese">
+    <h4>Cheese</h4>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="gruyere" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">Gruyere: $3</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="government" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">Government: $0</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="swiss" value="option3">
+        <label class="form-check-label" for="inlineCheckbox3">Swiss: $1</label>
+    </div>
+    </div>
+
+    <div id="pick-veggie">
+    <h4>Veggies</h4>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="peppers" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">Peppers: $1</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="pickles" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">Pickles: $1</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="tomato" value="option3">
+        <label class="form-check-label" for="inlineCheckbox3">Tomato: $2</label>
+    </div>
+    </div>
+
+    <div id="pick-condi">
+    <h4>Condiments</h4>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="ketchup" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">Ketchup: $1</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="marinara" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">Marinara: $2</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="A1" value="option3">
+        <label class="form-check-label" for="inlineCheckbox3">A1: $2</label>
+    </div>
+    </div>
+
+    <div>
+    <button type="button" class="btn btn-primary" id="checkout">Checkout</button>
+    </div>
+</form>
+<div class='row'>
+    <!--<div id="store-container"class="col-6"></div>-->
+
+    <div id='cart-container'class='col-8'>
+       
+    </div>
+</div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -27,7 +115,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script type="module" src="./javascripts/main.js"></script>
+        <script type="module" src="./javascripts/main.js"></script>
+        <!-- <script type="module" src="./javascripts/components/bread.js"></script>
+        <script type="module" src="./javascripts/components/meat.js"></script>
+        <script type="module" src="./javascripts/components/cheese.js"></script>
+        <script type="module" src="./javascripts/components/condiments.js"></script>
+        <script type="module" src="./javascripts/components/veggies.js"></script> -->
+
 </body>
 
 </html>

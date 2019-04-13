@@ -1,12 +1,23 @@
+import cart from '../components/cart.js';
+
 const breadInfo = {
     white: 1,
     wheat: 2,
-    hardtack: 3,
-    lettuce: 2
+    hardtack: 3,  
 };
 
 const getBread = () => {
     return breadInfo;
 };
 
-export default { getBread };
+const addBread = (ingredient) => {
+    const ingredientToAdd = {
+        name: ingredient,
+        price: breadInfo[ingredient],
+        type: 'bread'
+    };
+
+    cart.addToCart(ingredientToAdd);
+} 
+
+export default { getBread, addBread };
