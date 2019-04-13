@@ -1,12 +1,23 @@
-const condimentInfo = {
-    A1: 1,
+import cart from '../components/cart.js';
+
+const condiInfo = {
+    ketchup: 1,
     marinara: 2,
-    margarine: 1,
-    ketchup: 1
+    A1: 2
 };
 
 const getCondiment = () => {
     return condimentInfo;
 };
 
-export default { getCondiment };
+const addCondi = (ingredient) => {
+    const ingredientToAdd = {
+        name: ingredient,
+        price: condiInfo[ingredient],
+        type: 'condiment'
+    };
+
+    cart.addToCart(ingredientToAdd);
+} 
+
+export default { getCondiment, addCondi };

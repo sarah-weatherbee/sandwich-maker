@@ -1,12 +1,23 @@
+import cart from '../components/cart.js';
+
 const cheeseInfo = {
     gruyere: 3,
-    queso: 2,
     government: 0,
-    swiss: 2
+    swiss: 1
 };
 
 const getCheese = () => {
     return cheeseInfo;
 };
 
-export default { getCheese };
+const addCheese = (ingredient) => {
+    const ingredientToAdd = {
+        name: ingredient,
+        price: cheeseInfo[ingredient],
+        type: 'cheese'
+    };
+
+    cart.addToCart(ingredientToAdd);
+} 
+
+export default { getCheese, addCheese };

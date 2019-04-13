@@ -1,12 +1,23 @@
-const veggiesInfo = {
+import cart from '../components/cart.js';
+
+const veggieInfo = {
     peppers: 1,
     pickles: 1,
     tomato: 2,
-    olives: 3
 };
 
-const getVeggies = () => {
-    return veggiesInfo;
+const getVeggie = () => {
+    return veggieInfo;
 };
 
-export default { getVeggies };
+const addVeggie = (ingredient) => {
+    const ingredientToAdd = {
+        name: ingredient,
+        price: veggieInfo[ingredient],
+        type: 'veggie'
+    };
+
+    cart.addToCart(ingredientToAdd);
+} 
+
+export default { getVeggie, addVeggie };
