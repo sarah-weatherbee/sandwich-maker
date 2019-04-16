@@ -14,6 +14,7 @@ const cartToDom = () => {
     const myCart = getCart();
     const totalcost = myCart.reduce((a, b)=> {return a + b.price},0) //method sums the cost
     let domString = `<div>`;
+    domString +=`<h2>Checkout</h2>`;
     myCart.forEach((ingredient) => {
     domString += `<div>`;
     domString += `<h5>${ingredient.type}: ${ingredient.name} $${ingredient.price}</h5>`;

@@ -14,7 +14,7 @@ const addCondi = (ingredient) => {
     const ingredientToAdd = {
         name: ingredient,
         price: condiInfo[ingredient],
-        type: 'condiment'
+        type: 'Condiment'
     };
 
     cart.addToCart(ingredientToAdd);

@@ -14,7 +14,7 @@ const addCheese = (ingredient) => {
     const ingredientToAdd = {
         name: ingredient,
         price: cheeseInfo[ingredient],
-        type: 'cheese'
+        type: 'Cheese'
     };
 
     cart.addToCart(ingredientToAdd);
