@@ -17,7 +17,7 @@ const addMeat = (ingredient) => {
     const ingredientToAdd = {
         name: ingredient,
         price: meatInfo[ingredient],
-        type: 'meat'
+        type: 'Meat'
     };
 
     cart.addToCart(ingredientToAdd);
