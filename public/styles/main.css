@@ -1,5 +1,5 @@
 body {
-    background-color: blanchedalmond;
+    background-color: none;
 }
 
 .col-6 {
@@ -8,4 +8,14 @@ body {
 }
 #checkout {
     margin-top: 5px;
+}
+#form-container {
+    margin-left: 30%;
+    margin-top: 3%;
+}
+#cart-container {
+    margin-left: 30%;
+}
+.image-element {
+    margin-left: 35%;
 }
